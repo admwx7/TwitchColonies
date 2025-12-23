@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bb4klu4ogrncl"]
+
+[ext_resource type="PackedScene" uid="uid://b7gwepguuqlhl" path="res://entities/hub.tscn" id="1_5hirc"]
+
+[sub_resource type="Gradient" id="Gradient_5feqa"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(1.4379062e-06, 0.29063106, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5hirc"]
+gradient = SubResource("Gradient_5feqa")
+
+[node name="Gathering" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(330.00003, 330)
+scale = Vector2(10.312499, 10.3125)
+texture = SubResource("GradientTexture2D_5hirc")
+
+[node name="Hub" parent="." instance=ExtResource("1_5hirc")]
+position = Vector2(330, 330)

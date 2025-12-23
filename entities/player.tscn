@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqhvjdlep8vtm"]
+
+[ext_resource type="Script" uid="uid://25krk2v8u76c" path="res://entities/player.gd" id="1_4flbx"]
+
+[sub_resource type="Gradient" id="Gradient_sh265"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4flbx"]
+gradient = SubResource("Gradient_sh265")
+width = 16
+height = 16
+
+[sub_resource type="LabelSettings" id="LabelSettings_sh265"]
+font_size = 10
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_4flbx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_4flbx")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -19.0
+offset_top = 9.0
+offset_right = 20.0
+offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_sh265")
+horizontal_alignment = 1

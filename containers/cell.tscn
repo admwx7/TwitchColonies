@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://csydfvjnu6r4x"]
+
+[ext_resource type="Script" uid="uid://b366665l7qa47" path="res://containers/cell.gd" id="1_yh0nt"]
+
+[node name="Cell" type="Node2D"]
+script = ExtResource("1_yh0nt")
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0, 64, 0, 64, 64, 0, 64, 0, -0.5)
+width = 1.0
+default_color = Color(0.36862746, 0.36862746, 0.36862746, 0.3764706)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
