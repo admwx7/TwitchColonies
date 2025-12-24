@@ -1,6 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://b2thsd5s15d42"]
+[gd_scene load_steps=4 format=3 uid="uid://b2thsd5s15d42"]
 
 [ext_resource type="Script" uid="uid://lupkh3tr4dcn" path="res://entities/resource.gd" id="1_mm16c"]
 
+[sub_resource type="Gradient" id="Gradient_mm16c"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.9777644, 0.0003715694, 0.8903812, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6imu4"]
+gradient = SubResource("Gradient_mm16c")
+width = 32
+height = 32
+
 [node name="Resource" type="Node2D"]
+visible = false
+visibility_layer = 2
+z_index = 2
 script = ExtResource("1_mm16c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_6imu4")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

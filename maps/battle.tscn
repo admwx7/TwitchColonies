@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://cckfuejot0scu"]
+[gd_scene load_steps=3 format=3 uid="uid://cckfuejot0scu"]
+
+[ext_resource type="Script" uid="uid://ba0g56aptsbs0" path="res://maps/map.gd" id="1_b2a3u"]
+[ext_resource type="PackedScene" uid="uid://csydfvjnu6r4x" path="res://containers/cell.tscn" id="2_xnxal"]
 
 [node name="Battle" type="Node2D"]
+script = ExtResource("1_b2a3u")
+
+[node name="Cells" type="Node" parent="."]
+
+[node name="Cell" parent="Cells" instance=ExtResource("2_xnxal")]

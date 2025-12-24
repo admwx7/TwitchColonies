@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b366665l7qa47" path="res://containers/cell.gd" id="1_yh0nt"]
 
 [node name="Cell" type="Node2D"]
+z_index = 1
 script = ExtResource("1_yh0nt")
 
 [node name="Line2D" type="Line2D" parent="."]
@@ -11,4 +12,5 @@ width = 1.0
 default_color = Color(0.36862746, 0.36862746, 0.36862746, 0.3764706)
 
 [node name="Timer" type="Timer" parent="."]
+process_callback = 0
 one_shot = true

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://emqespjhkbl3"]
+
+[ext_resource type="Script" uid="uid://ba0g56aptsbs0" path="res://maps/map.gd" id="1_ba70a"]
+[ext_resource type="PackedScene" uid="uid://csydfvjnu6r4x" path="res://containers/cell.tscn" id="2_msh4x"]
+
+[node name="Build" type="Node2D"]
+script = ExtResource("1_ba70a")
+
+[node name="Cells" type="Node" parent="."]
+
+[node name="Cell" parent="Cells" instance=ExtResource("2_msh4x")]

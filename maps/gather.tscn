@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://bb4klu4ogrncl"]
+
+[ext_resource type="Script" uid="uid://ba0g56aptsbs0" path="res://maps/map.gd" id="1_qf1d6"]
+[ext_resource type="PackedScene" uid="uid://csydfvjnu6r4x" path="res://containers/cell.tscn" id="2_0s1nf"]
+
+[sub_resource type="Gradient" id="Gradient_5feqa"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(1.4379062e-06, 0.29063106, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5hirc"]
+gradient = SubResource("Gradient_5feqa")
+
+[node name="Gather" type="Node2D"]
+script = ExtResource("1_qf1d6")
+hub_location = Vector2(330, 330)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(330.00003, 330)
+scale = Vector2(10.312499, 10.3125)
+texture = SubResource("GradientTexture2D_5hirc")
+
+[node name="Cells" type="Node" parent="."]
+
+[node name="Cell" parent="Cells" instance=ExtResource("2_0s1nf")]
+width = 220.0
+height = 220.0
+
+[node name="Cell2" parent="Cells" instance=ExtResource("2_0s1nf")]
+position = Vector2(220, 0)
+width = 220.0
+height = 220.0
+
+[node name="Cell3" parent="Cells" instance=ExtResource("2_0s1nf")]
+position = Vector2(440, 0)
+width = 220.0
+height = 220.0
+
+[node name="Cell4" parent="Cells" instance=ExtResource("2_0s1nf")]
+position = Vector2(0, 220)
+width = 220.0
+height = 220.0
+
+[node name="Cell5" parent="Cells" instance=ExtResource("2_0s1nf")]
+position = Vector2(440, 220)
+width = 220.0
+height = 220.0
+
+[node name="Cell6" parent="Cells" instance=ExtResource("2_0s1nf")]
+position = Vector2(0, 440)
+width = 220.0
+height = 220.0
+
+[node name="Cell7" parent="Cells" instance=ExtResource("2_0s1nf")]
+position = Vector2(220, 440)
+width = 220.0
+height = 220.0
+
+[node name="Cell8" parent="Cells" instance=ExtResource("2_0s1nf")]
+position = Vector2(440, 440)
+width = 220.0
+height = 220.0
