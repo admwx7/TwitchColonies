@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var player_name: String = "";
-@export var screen_name: String = "";
+@export var uid: String = "";
 @export var velocity: float = 50.0; # pixels per second
 
 var state: Types.PlayerState;
